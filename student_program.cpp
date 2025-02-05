@@ -4,18 +4,21 @@ void GetMatrix( int **value, int *row, int *col ) ;
 void PrintMatrix( int **value, int row, int col ) ;
 
 int main() {
-    int *data, m = 2, n = 3 ;
+    int *data, m = 3, n = 3 ;
     data = new int[ m * n ] ; 
 
     GetMatrix( &data, &m, &n ) ;
     PrintMatrix( &data, m, n ) ;
 
+    delete[] data ;
     return 0 ;
 
 }//end function
 
 void GetMatrix( int **value, int *row, int *col ) {
  
+*row = 2 ;
+
  printf ("Enter the elements of the matrix (%d x %d):\n" , *row , *col ) ;
 
  for ( int i=0 ; i < *row ; i++ ) {
